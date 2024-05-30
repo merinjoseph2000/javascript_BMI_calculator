@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI CALCULATOR</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./scripts.js">
+
+</head>
+<style>
+   #result {
+      color: red;
+   }
+   #status {
+      color: red;
+   }
+</style>
+<body>
+    <nav class="navbar bg-body-tertiary">
+        <div class="container">
+          <a class="navbar-brand" href="#">
+            <img src="./images/bmi.png" alt="Bootstrap" >
+          </a>
+        </div>
+        <div class="container-fluid">
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"  >
+              <i class="fa fa-search"></i>
+            </form>
+          </div>
+          <ul type="none">
+            <li><a href="">About Us</a></li>
+            <li><a href=""> Careers</a></li>
+            <li><a href="">Contact Us</a></li>
+            <li><button>Track Application</button></li>
+            <li><i class="fa-regular fa-bell" style="color: #51241f;"></i></li>
+            <li><button class="login"><i class="fa-regular fa-circle-user"></i>&nbspLOGIN</button></li>
+          </ul>
+      </nav>
+      <div class="main">
+        <ul type="none">
+          <li> <div class="dropdown">
+            <button class="dropbtn">Plans
+              <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+              <!-- <a href="#">Link 1</a>
+              <a href="#">Link 2</a>
+              <a href="#">Link 3</a> -->
+            </div>
+          </div></li>
+          <li><a href="">Term insurence</a></li>
+          <li><a href="">Claims</a></li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <li><div class="dropdown">
+            <button class="dropbtn">Library
+              <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+              <!-- <a href="#">Link 1</a>
+              <a href="#">Link 2</a>
+              <a href="#">Link 3</a> -->
+            </div>
+          </div></li>
+          <li><a href="">Customer Services</a></li>
+          <li><a href="">Public Disclosure</a></li>
+          <li><a href="">Tax Centre</a></li>
+        </ul>
+      </div>
+      <div class="main2">
+     <div class="sub">   <img src="https://www.iciciprulife.com/content/icici-prudential-life-insurance/tools-and-calculators/bmi_assets/images/Component21.svg" alt="">
+      <h1>BMI Calculator</h1>
+      <h3>Body Mass Index</h3>
+    </div>
+    <div class="bodyp">
+      <table>
+        <tr><td> <input type="radio" id="html" name="fav_language" value="male">
+            <label for="html">Male</label>
+            <input type="radio" id="css" name="fav_language" value="female">
+            <label for="css">Female</label>
+            
+        <tr><td> <label for="">Age:</label></td></tr>
+       <tr><td>  <input type="text"></td></tr>
+      <tr><td> <label for="">Height:</label></td></tr>
+      <tr><td>  <input id="height" type="text"></td></tr>
+       
+      <tr><td>  <label for="">Weight:</label></td></tr>
+      <tr><td> <input id="weight" type="text"></td></tr><br>
+   
+      <tr><td>  <button  onclick="buttonclick()"  style="background-color: #4CAF50;
+      color: white;margin-top: 10px; border-radius: 6px;">Calculate</button></td></tr>
+ 
+       
+      
+        <P id="result"></P>
+        <p id="status"></p>
+      </table>
+      <img src="./images/images2.jpg" alt="">
+      </div>
+      </div>
+     
+      <script>
+        function buttonclick() {
+            const height=document.getElementById("height").value
+            const weight=document.getElementById("weight").value
+            if (weight && height) {
+        var heightInMeters = height / 100;
+        var bmi = (weight / (heightInMeters * heightInMeters)).toFixed(2);
+
+            var status;
+        if (bmi < 18.5) {
+          status = 'Underweight';
+        } else if (bmi >= 18.5 && bmi < 24.9) {
+          status = 'Normal weight';
+        } else if (bmi >= 25 && bmi < 29.9) {
+          status = 'Overweight';
+        } else {
+          status = 'Obese';
+        }
+        document.getElementById('result').innerHTML = 'Your BMI is: ' + bmi;
+        document.getElementById('status').innerHTML = 'Status: ' + status;
+        }
+        else{
+          document.getElementById('result').innerHTML = '';
+        document.getElementById('status').innerHTML = 'Please enter both weight and height.';
+        }
+      }
+      </script>
+</body>
+</html>

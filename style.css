@@ -1,0 +1,107 @@
+nav img{
+    margin-left: -20px;
+}
+nav ul {
+    display: flex;
+    margin-left: 550px;
+    margin-top: -30px;
+  
+}
+nav ul a{
+    text-decoration: none;
+    margin-left: 10px;
+    color: black;
+}
+.d-flex{
+    margin-left: 350px;
+    margin-top: -45px;
+
+}
+.d-flex i{
+    margin-left: -30px;
+    margin-top: 10px;
+    color: brown;
+}
+button{
+    margin-left: 40px;
+}
+.fa-regular {
+    margin-left: 10px;
+   height: 10px;
+}
+.login{
+    background-color:  #B02E30;
+    color: white;
+    border: none;
+}
+.main{
+    height: 50px;
+    width: 100%;
+    background-color: #B02E30;
+    display: flex;
+}
+.main ul {
+    display: flex;
+    padding: 14px 12px;
+    margin-left: 80px;
+  
+}
+.main ul li a{
+    color: white;
+    margin-left: 60px;
+    text-decoration: none;
+  
+}
+.dropdown {
+    float: left;
+    overflow: hidden;
+  }
+  
+  /* Dropdown button */
+  .dropdown .dropbtn {
+    font-size: 16px;
+    border: none;
+    outline: none;
+    color: white;
+    /* padding: 14px 12px; */
+    background-color: inherit;
+    font-family: inherit; /* Important for vertical align on mobile phones */
+    margin: 0; /* Important for vertical align on mobile phones */
+  }
+  .main2{
+    background-color: beige;
+    margin-left: 90px;
+    margin-right: 90px;
+    margin-top: 30px;
+    height: 600px;
+  }
+ .sub {
+    background-color: beige;
+    color: #B02E30;
+
+ }
+  .sub img{
+    padding: 30px;
+  }
+ .sub h1{
+    padding-left: 170px;
+    margin-top:-120px ;
+ }
+ .sub h3{
+    margin-left:170px ;
+ }
+.bodyp{
+    background-color: white;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.bodyp img{
+    margin-left: 500px;
+    margin-top: -200px;
+}
+#btn{
+   margin-top: 0px;
+}
+table{
+    margin-left: 20px;
+}
